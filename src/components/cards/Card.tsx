@@ -1,9 +1,17 @@
 'use client'
 import React, { useEffect } from 'react'
 import './Card.css'
-import { type ICardProps } from '@/components/cards/CardInterface'
+import { type Card as CardInterface } from '@/components/cards/CardInterface'
 
-const Card: React.FC<ICardProps> = ({
+interface CardProps extends CardInterface {
+  onSelect: () => void
+  onSelectAnswer: (answer: string) => void
+  tabIndex: number
+  displayAnswer: boolean
+  resetCard: boolean
+}
+
+const Card: React.FC<CardProps> = ({
   question,
   code,
   options,

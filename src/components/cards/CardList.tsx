@@ -1,11 +1,22 @@
 'use client'
 import React from 'react'
 import Card from './Card'
-import { type ICard, type ICardListProps } from '@/components/cards/CardInterface'
+import { type Card as CardInterface } from '@/components/cards/CardInterface'
 import { motion } from 'framer-motion'
 import './CardList.css'
 
-const CardList: React.FC<ICardListProps> = ({
+interface CardListProps {
+  cardColor: string
+  textColor: string
+  onSelectAnswer: (answer: string, card: CardInterface) => void
+  onSelectCard: (card: CardInterface) => void
+  jsonData: CardInterface[]
+  selectedCard: CardInterface | null
+  displayAnswers: boolean
+  resetCards: boolean
+}
+
+const CardList: React.FC<CardListProps> = ({
   jsonData,
   cardColor,
   textColor,
@@ -14,23 +25,11 @@ const CardList: React.FC<ICardListProps> = ({
   displayAnswers,
   resetCards,
 }) => {
-  // useEffect(() => {
-  //   console.log('CardList component mounted')
-  //   if (cardColor) {
-  //     console.log('Selected color (card list):', cardColor)
-  //   }
-  //   return () => {
-  //     console.log('CardList component unmounted')
-  //   }
-  // }, [cardColor])
-
-  // const [selectedCard, setSelectedCard] = useState<ICard | null>(null)
-
-  const handleSelectCard = (card: ICard) => {
+  const handleSelectCard = (card: CardInterface) => {
     onSelectCard(card)
   }
 
-  const handleSelectAnswer = (answer: string, card: ICard) => {
+  const handleSelectAnswer = (answer: string, card: CardInterface) => {
     onSelectAnswer(answer, card)
   }
 
@@ -57,7 +56,6 @@ const CardList: React.FC<ICardListProps> = ({
   return (
     <div>
       <motion.div
-        // className="container grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-2 lg:grid-cols-2 lg:gap-2 xl:grid-cols-4 xl:gap-3"
         className="cards-container grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-2 lg:grid-cols-2 lg:gap-2 xl:grid-cols-3 xl:gap-3 2xl:grid-cols-4 2xl:gap-3"
         variants={container}
         initial="hidden"
