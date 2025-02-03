@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import LlmService from '@/services/LlmService'
-import { type IGeneratedAnswer, type IGeneratedAnswerResponse } from '@/services/dto'
+import { type GeneratedAnswer, type GeneratedAnswerResponse } from '@/services/dto'
 
 interface ErrorMessage {
   message: string
@@ -8,7 +8,7 @@ interface ErrorMessage {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IGeneratedAnswer | ErrorMessage>,
+  res: NextApiResponse<GeneratedAnswer | ErrorMessage>,
 ) {
   if (req.method === 'POST') {
     try {
@@ -18,7 +18,7 @@ export default async function handler(
       }
 
       const llmService = new LlmService(req.headers.authorization ?? '')
-      const response: IGeneratedAnswerResponse =
+      const response: GeneratedAnswerResponse =
         await llmService.generateAnswer(userMessage)
 
       res.status(200).json(response.data)

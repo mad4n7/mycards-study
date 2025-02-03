@@ -1,8 +1,5 @@
 import CoreAuth from '@/services/CoreAuth'
-import {
-  type IGeneratedAnswerResponse,
-  type IGeneratedTextResponse,
-} from '@/services/dto'
+import { type GeneratedAnswerResponse, type IGeneratedTextResponse } from '@/services/dto'
 import { generateHmac } from '@/helpers'
 
 // mostly used for testing or a fallback to keep the app working
@@ -48,7 +45,7 @@ class LlmService extends CoreAuth {
     })
   }
 
-  public async generateAnswer(userMessage: string): Promise<IGeneratedAnswerResponse> {
+  public async generateAnswer(userMessage: string): Promise<GeneratedAnswerResponse> {
     const axios = this.getAxiosInstance()
     const apiUrl = process.env.API_TEXT_ANSWER_GENERATION ?? ''
 

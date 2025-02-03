@@ -1,9 +1,9 @@
-interface IGeneratedAnswer {
+interface GeneratedAnswer {
   answer: string
 }
 
-interface IGeneratedAnswerResponse {
-  data: IGeneratedAnswer
+interface GeneratedAnswerResponse {
+  data: GeneratedAnswer
 }
 
-export type { IGeneratedAnswer, IGeneratedAnswerResponse }
+export type { GeneratedAnswer, GeneratedAnswerResponse }

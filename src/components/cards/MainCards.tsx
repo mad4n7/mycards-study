@@ -1,19 +1,27 @@
 'use client'
 import { ColorsSwatch } from '@/components/colorsSwatch'
 import CardList from '@/components/cards/CardList'
-import { type ICard, type IIndexedCardData } from '@/components/cards/CardInterface'
+import { type Card } from '@/components/cards/CardInterface'
 import { useEffect, useState } from 'react'
 import { ConfirmDialog } from '@/components/dialogs'
+// TODO: remove sample data
 // import questionsSamplePythonIfGemini from '@/sample/questionsSamplePythonIfGemini'
 
 // TODO: replace with real data
-// const jsonData: { content: ICard[] } = questionsSamplePythonIfGemini
+// const jsonData: { content: Card[] } = questionsSamplePythonIfGemini
 const MAX_POINTS_IN_PERCENTAGE = 100
 
 interface MainCardsProps {
-  jsonData: { content: ICard[] }
+  jsonData: { content: Card[] }
   maxQuestions: number
   onChangeMessageButton: () => void
+}
+
+interface IndexedCardData {
+  id: number
+  answered: boolean
+  answeredCorrectly: boolean
+  correctAnswer: string
 }
 
 const MainCards: React.FC<MainCardsProps> = ({
@@ -21,7 +29,7 @@ const MainCards: React.FC<MainCardsProps> = ({
   maxQuestions,
   onChangeMessageButton,
 }) => {
-  const [selectedCard, setSelectedCard] = useState<ICard | null>(null)
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null)
   const [selectedBackgroundColor, setSelectedBackgroundColor] = useState<string>('')
   const [selectedTextColor, setSelectedTextColor] = useState<string>('')
   const [displayAnswers, setDisplayAnswers] = useState<boolean>(false)
@@ -29,7 +37,7 @@ const MainCards: React.FC<MainCardsProps> = ({
   const [totalQuestions, setTotalQuestions] = useState<number>(maxQuestions)
   const [openFinishDialog, setOpenFinishDialog] = useState<boolean>(false)
   const [resetCards, setResetCards] = useState<boolean>(false)
-  const [indexedCards, setIndexedCards] = useState<IIndexedCardData[]>()
+  const [indexedCards, setIndexedCards] = useState<IndexedCardData[]>()
 
   useEffect(() => {
     const data: any = []
@@ -44,7 +52,7 @@ const MainCards: React.FC<MainCardsProps> = ({
     setIndexedCards(data)
   }, [])
 
-  // TODO: add redux store or context to manage state (I feel lazy right now to do it)
+  // TODO: add redux store or context to manage state (it's a good to have)
   useEffect(() => {
     if (!indexedCards) return
 
@@ -68,9 +76,9 @@ const MainCards: React.FC<MainCardsProps> = ({
     setSelectedTextColor(hexColor)
   }
 
-  const handleSelectAnswer = (answer: string, answeredCard: ICard) => {
+  const handleSelectAnswer = (answer: string, answeredCard: Card) => {
     if (!indexedCards) return
-    const cardsIndexData: IIndexedCardData[] = [...indexedCards]
+    const cardsIndexData: IndexedCardData[] = [...indexedCards]
     const currentCard = cardsIndexData.find((card) => card.id === answeredCard.id)
 
     if (currentCard) {
@@ -108,7 +116,7 @@ const MainCards: React.FC<MainCardsProps> = ({
 
   const resetAnsweredQuestions = () => {
     if (!indexedCards) return
-    const cardsIndexData: IIndexedCardData[] = [...indexedCards]
+    const cardsIndexData: IndexedCardData[] = [...indexedCards]
     cardsIndexData.forEach((card) => {
       card.answered = false
       card.answeredCorrectly = false
