@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { AvailableLanguages } from '@/components/info'
 import Link from 'next/link'
+import { PrimaryButton } from '@/components/buttons'
 
 const DEFAULT_MAX_QUESTIONS = 6
 const MAX_PROMPT_LENGTH = 4080
@@ -97,21 +98,17 @@ const Prompt: React.FC<PromptProps> = ({ onSubmit, lastUserMessage }) => {
               Cheat Mode
             </button>
           </Link>
-          <button
+          <PrimaryButton
+            onClick={handleSubmit}
             tabIndex={2}
             disabled={!userMessage}
-            onClick={handleSubmit}
-            type="button"
-            className={`${!userMessage ? 'cursor-not-allowed bg-indigo-400' : 'bg-indigo-500'} rounded-md active:border-slate-900  px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}
+            highlight
           >
             Generate Questions
-          </button>
+          </PrimaryButton>
         </div>
         <div className="mt-1 space-y-1">
           <fieldset>
-            {/* <legend className="text-sm font-semibold leading-6 text-white"> */}
-            {/*  Customize */}
-            {/* </legend> */}
             <div className="mt-6 space-y-6">
               <div className="relative flex gap-x-3 items-center">
                 <div className="flex h-6 items-center">
@@ -123,10 +120,6 @@ const Prompt: React.FC<PromptProps> = ({ onSubmit, lastUserMessage }) => {
                   </label>
                 </div>
                 <div className="text-sm leading-6">
-                  {/* <label htmlFor="comments" className="font-medium text-white"> */}
-                  {/*  Generate new questions */}
-                  {/* </label> */}
-
                   <select
                     tabIndex={3}
                     id="questions_number"

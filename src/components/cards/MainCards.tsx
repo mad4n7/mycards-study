@@ -4,6 +4,7 @@ import CardList from '@/components/cards/CardList'
 import { type Card } from '@/components/cards/CardInterface'
 import { useEffect, useState } from 'react'
 import { ConfirmDialog } from '@/components/dialogs'
+import { PrimaryButton } from '@/components/buttons'
 // TODO: remove sample data
 // import questionsSamplePythonIfGemini from '@/sample/questionsSamplePythonIfGemini'
 
@@ -168,21 +169,13 @@ const MainCards: React.FC<MainCardsProps> = ({
       <div className="flex flex-row justify-end">
         <div className="mb-6 flex justify-end items-end lg:pl-14 px-3 py-2 gap-x-4">
           {displayAnswers && (
-            <button
-              type="button"
-              className="bg-indigo-500 border-2 border-indigo-500 rounded-md active:border-slate-900  px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              onClick={handleReset}
-            >
+            <PrimaryButton onClick={handleReset} highlight>
               Reset and try again
-            </button>
+            </PrimaryButton>
           )}
-          <button
-            type="button"
-            className="bg-slate-900 border-2 border-indigo-500 rounded-md active:border-slate-900  px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-            onClick={() => setDisplayAnswers(!displayAnswers)}
-          >
+          <PrimaryButton onClick={() => setDisplayAnswers(!displayAnswers)}>
             {displayAnswers ? 'Hide' : 'Show'} answers
-          </button>
+          </PrimaryButton>
         </div>
       </div>
 
