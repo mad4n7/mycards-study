@@ -22,6 +22,7 @@ mycards-webapp/
 │   │   └── page.tsx     # Home page component
 │   │
 │   ├── components/       # Reusable React components
+│   │   ├── buttons/     # Button components
 │   │   ├── cards/       # Card-related components
 │   │   ├── colorsSwatch/ # Color selection components
 │   │   ├── dialogs/     # Dialog/modal components
