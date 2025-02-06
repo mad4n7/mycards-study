@@ -71,6 +71,39 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Testing
+
+The project uses Jest for unit testing. Tests are located in the `src/__tests__` directory, following the same structure as the source code.
+
+### Running Tests
+
+- Run all tests:
+  ```bash
+  npm test
+  ```
+
+- Run tests in watch mode (recommended during development):
+  ```bash
+  npm test -- --watch
+  ```
+
+- Run a specific test file:
+  ```bash
+  npm test -- src/__tests__/filename.test.ts
+  ```
+
+- Run tests matching a specific pattern:
+  ```bash
+  npm test -- -t "test pattern"
+  ```
+
+- View test coverage:
+  ```bash
+  npm test -- --coverage
+  ```
+
+Test files follow the naming convention `*.test.ts` or `*.test.tsx` for React components.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
