@@ -1,5 +1,6 @@
 import { createHmac } from 'crypto'
 
+// just used for development, do not use in production
 const DEFAULT_SECRET_STRING = 'Fredekiko'
 const secret =
   process.env.ENVIRONMENT === 'development'

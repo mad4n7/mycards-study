@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Loading from '@/components/Loading'
 import PromptCheatMode from '@/components/PromptCheatMode'
-import BackButton from '@/components/BackButton'
+import BackButton from '@/components/buttons/BackButton'
 import { useRouter } from 'next/navigation'
 
 import Image from 'next/image'
@@ -104,8 +104,9 @@ const Entry: React.FC = () => {
         the deal: We’re on it. Making our app more accessible is high on our to-do list,
         and we’re figuring out the best ways to make things better for everyone. Got any
         tips or things you’ve noticed that we could fix? We’d love to hear from you. Just
-        shoot us a message at support@udooku.com, and let’s chat. Thanks for sticking with
-        us while we sort this out. We’re all about making our app better for you.
+        shoot us a message at contact@arthurbsilva.com, and let’s chat. Thanks for
+        sticking with us while we sort this out. We’re all about making our app better for
+        you.
       </span>
       {loading && <Loading />}
       {!displayAnswer && !loading && (

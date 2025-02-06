@@ -1,4 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MyCards Study Web Application
+
+A web application for studying with flashcards, built with Next.js and TypeScript.
+
+## Project Structure
+
+```
+mycards-webapp/
+├── public/                # Static files
+│   ├── animations/       # Animation assets
+│   ├── favicon.png      
+│   ├── loading.gif      
+│   ├── logo-icon.png    
+│   └── mycards-study-logo.png
+│
+├── src/                   # Source code
+│   ├── animations/       # Lottie files
+│   ├── app/             # Next.js app directory (App Router)
+│   │   ├── cheat-mode/  # Cheat mode feature pages
+│   │   ├── globals.css  # Global styles
+│   │   ├── layout.tsx   # Root layout component
+│   │   └── page.tsx     # Home page component
+│   │
+│   ├── components/       # Reusable React components
+│   │   ├── cards/       # Card-related components
+│   │   ├── colorsSwatch/ # Color selection components
+│   │   ├── dialogs/     # Dialog/modal components
+│   │   ├── info/        # Information display components
+│   │   └── [...]        # Various shared components
+│   │
+│   ├── helpers/         # Helper functions and utilities
+│   ├── pages/           # Additional pages
+│   ├── sample/          # Sample response data
+│   └── services/        # API services and business logic
+```
+
+## Key Components
+
+- `Layout.tsx`: Main layout wrapper component
+- `Entry.tsx`: Entry point component for cards
+- `Prompt.tsx`: Prompt display component
+- `BackButton.tsx`: Navigation component
+- `Loading.tsx`: Loading state component
+
+## Features
+
+- Study cards interface
+- Cheat mode functionality
+- Color customization
+- Responsive design
+- Loading animations
 
 ## Getting Started
 
