@@ -1,5 +1,6 @@
 import { createHmac } from 'crypto'
 
+// just used for development, do not use in production
 const DEFAULT_SECRET_STRING = 'Fredekiko'
 const secret =
   process.env.ENVIRONMENT === 'development'
@@ -7,7 +8,7 @@ const secret =
     : process.env.SECRET_KEY ?? DEFAULT_SECRET_STRING
 
 function generateHmac(data: string | object): string {
-  const message: string = data as string
+  const message = typeof data === 'string' ? data : JSON.stringify(data)
   return createHmac('sha256', secret).update(message).digest('hex')
 }
 

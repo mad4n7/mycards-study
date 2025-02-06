@@ -108,23 +108,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* {enableGa4 && ( */}
-        {/*  <> */}
-        {/*    <Script */}
-        {/*      async */}
-        {/*      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`} */}
-        {/*    /> */}
-        {/*    <Script id="google-analytics"> */}
-        {/*      {` */}
-        {/*     window.dataLayer = window.dataLayer || []; */}
-        {/*     function gtag(){dataLayer.push(arguments);} */}
-        {/*     gtag('js', new Date()); */}
-        {/*  */}
-        {/*     gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}'); */}
-        {/*  `} */}
-        {/*    </Script> */}
-        {/*  </> */}
-        {/* )} */}
         <title>MyCards.study</title>
         <meta property="og:url" content="https://mycards.study" />
         <meta property="og:type" content="website" />
