@@ -20,14 +20,12 @@ const Entry: React.FC = () => {
   const [cards, setCards] = useState<any>()
 
   const generateTextCards = async (userMessage: string, maxQuestions: number) => {
-    const AUTH_TOKEN = 'guest'
     setLoading(true)
 
     const response = await fetch('/api/generate/text', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${AUTH_TOKEN}`,
       },
       body: JSON.stringify({
         userMessage,
@@ -64,9 +62,11 @@ const Entry: React.FC = () => {
     setMaxQuestions(maxQuestions)
     generateTextCards(prompt, maxQuestions)
       .then((r: any) => {
+        // TODO: add toast
         // console.log(r)
       })
       .catch((e) => {
+        // TODO: add toast
         // console.log(e)
       })
   }
