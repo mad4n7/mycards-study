@@ -15,7 +15,6 @@ export interface GeneratedAnswerResponse {
 }
 
 class LlmService extends CoreAuth {
-
   constructor(token: string) {
     super(token)
   }

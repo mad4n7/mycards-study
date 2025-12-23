@@ -27,7 +27,7 @@
 
   $effect(() => {
     const data: IndexedCardData[] = []
-    jsonData.content.forEach((card) => {
+    jsonData.content.forEach((card) =>{
       data.push({
         id: card.id,
         answered: false,
