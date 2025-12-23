@@ -66,7 +66,7 @@
   })
 
   function getAnimationSize() {
-    if (percentage === 100) return '200px'
+    if (percentage === 100) return '250px'
     if (percentage === 0) return '90px'
     return '150px'
   }
@@ -82,7 +82,7 @@
           class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6"
         >
           <div>
-            <div class="mx-auto flex h-12 w-12 items-center justify-center">
+            <div class="mx-auto flex h-48 w-48 items-center justify-center">
               <div
                 bind:this={animationContainer}
                 style="height: {getAnimationSize()}; width: {getAnimationSize()};"

@@ -65,6 +65,8 @@
               class="px-4 block w-full rounded-md border-2 border-slate-600 bg-slate-500/30 py-1.5 text-white shadow-sm ring-1 ring-inset ring-slate-600/10 focus:ring-2 focus:ring-inset focus:ring-slate-700 sm:text-sm sm:leading-6"
               placeholder="What do you want to study today? Type some notes or subjects you want to study."
               bind:value={userMessage}
+              aria-required="true"
+              required
             ></textarea>
           </div>
         </div>

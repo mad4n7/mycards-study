@@ -4,130 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eaa5f877-1c5d-4fd7-a3c6-f34fd3773978" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/animations/loser.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/animations/neutral.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/animations/winner.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Entry.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/EntryCheatMode.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Layout.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Loading.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Prompt.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/PromptCheatMode.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/Toast.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/buttons/BackButton.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/buttons/PrimaryButton.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/cards/Card.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/cards/CardList.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/cards/MainCards.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/cards/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/colorsSwatch/ColorsSwatch.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/dialogs/ConfirmDialog.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/dialogs/TextInfoDialog.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/info/AvailableLanguages.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/contants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/contants/settings.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/helpers/hmac.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/services/CoreAuth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/api/generate/answer/+server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/api/generate/text/+server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/cheat-mode/+page.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/animations/cheat1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/animations/cmLooking.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/animations/cmLooking2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/animations/loser.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/animations/neutral.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/animations/winner.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mycards-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mycards-study.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/cheat1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/animations/cheat1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/cheat1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/cheat2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/animations/cheat2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/cheat3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/animations/cheat3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/cmLooking.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/cmLooking2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/loser.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/neutral.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/animations/winner.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/loading.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/logo-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mycards-study-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/mycards-study-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/helpers/hmac.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/services/LlmService.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/animations/loser.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/animations/neutral.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/animations/winner.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cheat-mode/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Entry.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EntryCheatMode.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Loading.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Prompt.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PromptCheatMode.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Toggle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/BackButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/PrimaryButton.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/buttons/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/Card.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/Card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardInterface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardList.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/MainCards.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/colorsSwatch/ColorsSwatch.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/colorsSwatch/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/ConfirmDialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/TextInfoDialog.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/info/AvailableLanguages.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/info/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/hmac.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/requestWithToken.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/api/generate/answer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/api/generate/text.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/questionsSamplePythonIf.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/questionsSamplePythonIfGemini.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/CoreAuth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/LlmService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/services/LlmService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dto/GeneratedAnswer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dto/GeneratedText.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/dto/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="eaa5f877-1c5d-4fd7-a3c6-f34fd3773978" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1766451484035</updated>
-      <workItem from="1766451485619" duration="1843000" />
+      <workItem from="1766451485619" duration="2466000" />
     </task>
     <servers />
   </component>

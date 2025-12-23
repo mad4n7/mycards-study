@@ -75,7 +75,7 @@
     </div>
     <div class="overlay flex justify-center">
       <h3
-        class="flex questionMark align-middle items-center text-xl font-bold mb-2"
+        class="flex questionMark align-middle items-center text-xl font-bold mb-2 pt-60"
         style="color: {textColor}"
       >
         ?
