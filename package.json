@@ -18,11 +18,13 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "start": "node build/index.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/adapter-node": "^5.4.0",
     "@sveltejs/kit": "^2.9.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@tailwindcss/forms": "^0.5.7",
