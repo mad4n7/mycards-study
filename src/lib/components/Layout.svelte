@@ -1,0 +1,210 @@
+<script lang="ts">
+  import TextInfoDialog from './dialogs/TextInfoDialog.svelte'
+
+  let { children } = $props()
+
+  let mobileMenuOpen = $state(false)
+  let termsOfUseOpen = $state(false)
+  let contactUsOpen = $state(false)
+
+  const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL ?? ''
+
+  const navigation = [
+    { name: 'Product', href: '#' },
+    { name: 'Features', href: '#' },
+    { name: 'Marketplace', href: '#' },
+    { name: 'Company', href: '#' }
+  ]
+</script>
+
+<div class="bg-slate-900 w-screen px-6 lg:px-36 md:px-24">
+  <!-- Header -->
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="https://mycards.study" class="-m-1.5 p-1.5">
+          <span class="sr-only">mycards.study</span>
+          <img
+            class="h-8 w-auto"
+            src="/mycards-study-logo.png"
+            alt="MyCards.Study Logo"
+            width="300"
+            height="80"
+          />
+        </a>
+      </div>
+    </nav>
+
+    {#if mobileMenuOpen}
+      <div class="lg:hidden">
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="https://mycards.study" class="-m-1.5 p-1.5">
+              <span class="sr-only">mycards.study</span>
+              <img
+                class="h-8 w-auto"
+                src="/mycards-study-logo.png"
+                alt="MyCards.Study Logo"
+                width="300"
+                height="80"
+              />
+            </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onclick={() => (mobileMenuOpen = false)}
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                {#each navigation as item}
+                  <a
+                    href={item.href}
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    {item.name}
+                  </a>
+                {/each}
+              </div>
+              <div class="py-6">
+                <a
+                  href="/login"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {/if}
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <div class="relative isolate overflow-hidden pb-4 pt-4 sm:pb-20">
+      {@render children()}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-32 bg-gray-900 sm:mt-56" aria-labelledby="footer-heading">
+    <button
+      class="text-xs text-blue-600 dark:text-blue-500 hover:underline"
+      onclick={() => (termsOfUseOpen = true)}
+    >
+      Terms of Use
+    </button>
+    <button
+      class="pl-4 text-xs text-blue-600 dark:text-blue-500 hover:underline"
+      onclick={() => (contactUsOpen = true)}
+    >
+      Contact
+    </button>
+  </footer>
+
+  <TextInfoDialog bind:open={contactUsOpen} title="Hi there!">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-4">Contact</h1>
+      <p class="mb-2">
+        Hi there! We hope you are enjoying the web application. We always looking for ways to
+        improve it.
+      </p>
+      {#if CONTACT_EMAIL}
+        <p class="mb-2">
+          If you have any questions, suggestions, or concerns, please feel free to contact us at <strong
+          >
+            {CONTACT_EMAIL}</strong
+          >.
+        </p>
+      {/if}
+    </div>
+  </TextInfoDialog>
+
+  <TextInfoDialog bind:open={termsOfUseOpen} title="Using mycards.study">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-4">Terms of Use</h1>
+      <p class="mb-2">
+        Welcome to <strong>mycards.study</strong>. By accessing and using our services, you agree to
+        comply with the following terms and conditions. Please read them carefully.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">AI-Generated Content</h2>
+      <p class="mb-2">
+        The content provided on <strong>mycards.study</strong> is generated by artificial
+        intelligence (AI).
+        <strong>MyCards.study</strong> does not guarantee the accuracy, reliability, or
+        appropriateness of the AI-generated content. Users acknowledge that by using the service,
+        they may encounter content that could be incorrect, misleading, or offensive.
+        <strong>MyCards.study</strong>
+        disclaims all liability related to the use of or reliance on any AI-generated content posted on
+        <strong>mycards.study</strong>.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Prohibited Use</h2>
+      <p class="mb-2">
+        Users are strictly prohibited from using <strong>mycards.study</strong> to generate or
+        disseminate any illegal content. This includes, but is not limited to, content that is
+        defamatory, obscene, abusive, that infringes on intellectual property rights, or that
+        promotes illegal activities.
+        <strong>MyCards.study</strong> reserves the right to remove such content and take appropriate
+        actions against the responsible users, which may include reporting to law enforcement authorities
+        and banning from the service.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Misleading Information</h2>
+      <p class="mb-2">
+        <strong>MyCards.study</strong> is not responsible for any misleading or incorrect
+        information generated by AI on <strong>mycards.study</strong>. Users should exercise caution
+        and use their judgment when interacting with AI-generated content on the platform.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Reporting Violations</h2>
+      <p class="mb-2">
+        If you encounter any content that violates these Terms of Use, please report it to us
+        immediately at
+        <strong>{CONTACT_EMAIL}</strong>. <strong>MyCards.study</strong> is committed to maintaining a
+        safe and respectful community and appreciates your cooperation in upholding these standards.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6 mb-2">Changes to Terms of Use</h2>
+      <p class="mb-2">
+        <strong>MyCards.study</strong> reserves the right to modify these Terms of Use at any time.
+        Any changes will be effective immediately upon posting on <strong>mycards.study</strong>.
+        Your continued use of the service constitutes your agreement to be bound by such
+        modifications to the Terms of Use.
+      </p>
+
+      {#if CONTACT_EMAIL}
+        <div>
+          <h2 class="text-2xl font-semibold mt-6 mb-2">Contact Us</h2>
+          <p class="mb-2">
+            For any questions or concerns regarding these Terms of Use, please contact us at
+            <strong>{CONTACT_EMAIL}</strong>.
+          </p>
+        </div>
+      {/if}
+
+      <p class="mt-6">
+        Thank you for choosing <strong>mycards.study</strong>. We are committed to providing a
+        quality service and appreciate your adherence to these Terms of Use.
+      </p>
+    </div>
+  </TextInfoDialog>
+</div>
