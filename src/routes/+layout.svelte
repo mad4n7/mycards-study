@@ -116,27 +116,6 @@
     name="description"
     content="Transform your study notes into interactive flashcards with AI. Generate multiple-choice questions instantly and study smarter."
   />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.mycards.study/" />
-  <meta property="og:title" content="MyCards.study - AI-Powered Flashcards" />
-  <meta
-    property="og:description"
-    content="Transform your study notes into interactive flashcards with AI. Generate multiple-choice questions instantly and study smarter."
-  />
-  <meta property="og:image" content="https://www.mycards.study/mycards-hero.jpg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://www.mycards.study/" />
-  <meta property="twitter:title" content="MyCards.study - AI-Powered Flashcards" />
-  <meta
-    property="twitter:description"
-    content="Transform your study notes into interactive flashcards with AI. Generate multiple-choice questions instantly and study smarter."
-  />
-  <meta property="twitter:image" content="https://www.mycards.study/mycards-hero.jpg" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
